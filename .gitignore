@@ -3,3 +3,5 @@ input/*
 tmp
 *.txt
 submit/*
+*.cpp 
+

@@ -8,7 +8,7 @@ sn=$(basename "$1")
 for i in ./input/*; do
 	if test -f "$i"
 	then
-		echo Running "$sn" on input "$i"
+		echo Running "$sn" on input "$(basename $i)"
 		fn=$(basename "$i")
 		tf="./tmp/${fn%.*}--${sn%.*}.${fn##*.}"
 		./"$1" < "$i" > "$tf" &
@@ -17,10 +17,13 @@ done
 
 wait # wait for all cases to finish running
 
+# remove executable
+rm "$1"
+
 for i in ./input/*; do
 	if test -f "$i"
 	then
-		rm "$1"
+		# move output files from temporary staging area to output folder
 		fn=$(basename "$i")
 		tf="./tmp/${fn%.*}--${sn%.*}.${fn##*.}"
 		of="./output/${fn%.*}--${sn%.*}.${fn##*.}"
