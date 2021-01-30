@@ -4,4 +4,4 @@ tmp
 *.txt
 submit/*
 *.cpp 
-
+.config
