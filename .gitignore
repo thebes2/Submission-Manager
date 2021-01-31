@@ -4,3 +4,5 @@ tmp
 *.txt
 submit/*
 .config
+client/*.cpp
+client/*.out

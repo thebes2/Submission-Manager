@@ -8,4 +8,11 @@ mkdir -p tmp/
 
 echo "counter=0" > .config
 
-watch -n 10 "./start.sh & ./grade.sh"
+clear
+while true; do
+	printf "%0.s=" $(seq 1 $COLUMNS)
+	./start.sh &
+	./grade.sh &
+	sleep 10
+	clear
+done
