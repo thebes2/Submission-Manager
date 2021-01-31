@@ -4,6 +4,7 @@ mkdir -p submit/
 mkdir -p input/
 mkdir -p output/
 mkdir -p grade/
+mkdir -p tmp/
 
 echo "counter=0" > .config
 

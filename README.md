@@ -15,12 +15,13 @@ git clone \
 	https://github.com/thebes2/Submission-Manager.git
 cd "Submission Manager"
 git checkout master -- server
+cd server
 ```
 2. Run `init.sh` to initialize folders and configurations.
 3. Executables placed inside the folder `submit` will be run against all input cases in `input` and the output will appear in `output`. They will be removed after being run to prevent the same program from being run multiple times.
 4. Place an executable inside the folder `grade` for determining which output file is the best solution so far. This executable should accept two arguments: the paths of the two output files to be compared and should return `0` if the second output should be kept and any return any non-zero value if the first output should be kept. 
 
-### Locally
+### Local Machine
 
 1. Run the command
 ```shell
@@ -31,6 +32,7 @@ git clone \
 	https://github.com/thebes2/Submission-Manager.git
 cd "Submission Manager"
 git checkout master -- client 
+cd client
 ```
 
 ## Examples
