@@ -38,4 +38,4 @@ cd client
 
 ## Examples
 
-- There is a sample grader executable in the folder `grade`. It reads in the first value in each output file and keeps the file with the larger value. The C++ file that was compiled into this executable is `examples/grader.cpp`. 
+- There is a sample grader executable in the folder `server/grade`. It reads in the first value in each output file and keeps the file with the larger value. The C++ file that was compiled into this executable is `server/examples/grader.cpp`. 

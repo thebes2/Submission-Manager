@@ -10,7 +10,8 @@ echo "counter=0" > .config
 
 clear
 while true; do
-	printf "%0.s=" $(seq 1 $COLUMNS)
+	now=$(date +'%m/%d/%Y %H:%M:%S')
+	printf "Curent time: $now\n\n"
 	./start.sh &
 	./grade.sh &
 	sleep 10
