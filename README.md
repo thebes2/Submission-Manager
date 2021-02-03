@@ -35,6 +35,9 @@ cd "Submission Manager"
 git checkout master -- client 
 cd client
 ```
+2. Run `init.sh` with the argument `user@server:/path/to/submit/` to set the path to the `submit` folder on the server.
+3. Run `submit.sh` with the argument `file` which is the executable you want to run on the server.
+4. Run `solution.sh` to get a zip file of the best solutions to each input in the current directory.  
 
 ## Examples
 

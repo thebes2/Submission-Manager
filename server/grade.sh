@@ -20,9 +20,15 @@ else
 				if test -f "$j"
 				then
 					if [ "$i" != "$j" ]; then
-						lcp=$(printf "%s\n%s\n" "$i" "$j" | sed -e 'N;s/^\(.*\).*\n\1.*$/\1/')
+						# lcp=$(printf "%s\n%s\n" "$i" "$j" | sed -e 'N;s/^\(.*\).*\n\1.*$/\1/')
+						ba=$(basename "$i")
+						bb=$(basename "$j")
+						a="${ba%.*}"
+						b="${bb%.*}"
+						pa=$(echo "$a" | sed 's/--.*//g')
+						pb=$(echo "$b" | sed 's/--.*//g')
 
-						if [[ "$lcp" == *--* ]]; then
+						if [ "$pa" = "$pb" ]; then
 							# the outputs are from the same test case
 							# keep the better one
 							./"$grader" "$i" "$j"

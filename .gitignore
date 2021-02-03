@@ -6,3 +6,4 @@ submit/*
 .config
 client/*.cpp
 client/*.out
+*.zip
