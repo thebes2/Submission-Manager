@@ -14,6 +14,7 @@ for i in ./input/*; do
 		fn=$(basename "$i")
 		tf="./tmp/${fn%.*}--${sn%.*}.${fn##*.}"
 		./"$fp" < "$i" > "$tf" &
+		echo $! >> .runtime
 	fi
 done
 

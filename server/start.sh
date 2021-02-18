@@ -9,6 +9,7 @@ for i in ./submit/*; do
 		echo Starting "$ff" with id "$counter"
 		mv "$i" "$ff"
 		./run.sh "$ff" &
+		echo $! >> .runtime
 		counter=$((counter+1))
 	fi
 done

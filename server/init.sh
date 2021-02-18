@@ -1,5 +1,16 @@
 #!/bin/bash
 
+function cleanup()
+{
+	while read p; do
+		echo "Ending process $p"
+		kill "$p"
+	done <.runtime
+	rm .runtime
+}
+
+trap cleanup EXIT
+
 mkdir -p submit/
 mkdir -p input/
 mkdir -p output/
@@ -7,6 +18,7 @@ mkdir -p grade/
 mkdir -p tmp/
 
 echo "counter=0" > .config
+touch .runtime
 
 clear
 while true; do
